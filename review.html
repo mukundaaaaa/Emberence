@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#171A1C">
+  <title>Leave a review | EMBERENCE DIGITAL</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --dark: #171A1C; --lime: #B8F34A; --off-white: #F5F5F2;
+  --text: #30363B; --muted: #777777; --white: #ffffff; --error: #B3261E;
+  --line: rgba(23, 26, 28, .1); --line-dark: rgba(245, 245, 242, .14);
+  --font-head: 'Manrope', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ease: .2s ease;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; font-family: var(--font-body); line-height: 1.7; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+h1 { font-family: var(--font-head); color: var(--dark); line-height: 1.15; margin: 0; letter-spacing: -.02em; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+header { background: var(--dark); border-bottom: 1px solid var(--line-dark); }
+.bar { width: min(1160px, 100% - 3rem); margin-inline: auto; height: 72px; display: flex; align-items: center; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--off-white); }
+.brand img { height: 36px; width: auto; display: block; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-name { font: 800 1.2rem var(--font-head); letter-spacing: .08em; }
+.brand-sub { font: 600 .62rem var(--font-head); letter-spacing: .5em; color: var(--lime); margin-top: .3rem; }
+
+main { width: min(640px, 100% - 2rem); margin: clamp(2rem, 6vw, 4rem) auto; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.5rem, 4vw, 2.5rem); }
+.lead { margin: .8rem 0 1.8rem; color: var(--muted); }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: .95rem 1.8rem; border-radius: 8px; border: 1.5px solid transparent; font: 600 .98rem/1 var(--font-head); cursor: pointer; transition: background var(--ease), color var(--ease); }
+.btn-primary { background: var(--lime); color: var(--dark); }
+.btn-primary:hover { background: var(--dark); color: var(--off-white); }
+.btn-danger { background: transparent; color: var(--error); border-color: var(--error); }
+.btn-danger:hover { background: rgba(179, 38, 30, .08); }
+.btn[disabled] { opacity: .6; cursor: not-allowed; }
+.btn-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
+.msg-link { margin-top: 1.5rem; }
+
+label, legend { display: block; font: 600 .92rem var(--font-head); color: var(--dark); margin: 0 0 .35rem; padding: 0; }
+.opt { font-weight: 500; color: var(--muted); }
+input[type=text], textarea { width: 100%; padding: .75rem .9rem; font: inherit; color: var(--text); background: var(--off-white); border: 1.5px solid rgba(23, 26, 28, .18); border-radius: 8px; }
+input[type=text]:focus, textarea:focus { outline: none; border-color: var(--dark); box-shadow: 0 0 0 3px var(--lime); }
+textarea { min-height: 150px; resize: vertical; }
+.field { margin-bottom: 1.3rem; }
+.hint { font-size: .85rem; color: var(--muted); margin-top: .3rem; }
+.counter { text-align: right; }
+fieldset.field { border: 0; padding: 0; margin: 0 0 1.3rem; min-width: 0; }
+
+.stars-input { display: flex; gap: .15rem; }
+.stars-input label { position: relative; margin: 0; padding: 0 .1rem; font-size: 2.2rem; line-height: 1.2; color: rgba(23, 26, 28, .2); cursor: pointer; border-radius: 6px; transition: color var(--ease); }
+.stars-input label.on { color: var(--dark); }
+.stars-input label:focus-within { outline: 3px solid var(--lime); }
+.stars-input input { position: absolute; opacity: 0; width: 100%; height: 100%; left: 0; top: 0; margin: 0; cursor: pointer; }
+
+.status { margin-bottom: 1rem; padding: .8rem 1rem; border-radius: 8px; font-size: .92rem; }
+.status.err { background: rgba(179, 38, 30, .08); color: var(--error); }
+.status.ok { background: rgba(184, 243, 74, .35); color: var(--dark); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.reply { margin-top: 1.8rem; padding: 1rem 1.1rem; border-left: 3px solid var(--lime); background: var(--off-white); border-radius: 0 8px 8px 0; font-size: .95rem; }
+.reply strong { display: block; font: 700 .9rem var(--font-head); color: var(--dark); margin-bottom: .2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="index.html" aria-label="Emberence Digital, home">
+        <img src="emberence-creative-logo.png" alt="" width="34" height="36">
+        <span class="brand-text"><span class="brand-name">EMBERENCE</span><span class="brand-sub">DIGITAL</span></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Loading -->
+    <div class="card" id="v-loading"><p>Checking your link...</p></div>
+
+    <!-- Message: invalid / expired / thank you / errors -->
+    <div class="card" id="v-message" hidden role="status">
+      <h1 id="m-title"></h1>
+      <p class="lead" id="m-text"></p>
+      <a class="btn btn-primary" id="m-link" href="index.html#review" hidden>See reviews on our site</a>
+    </div>
+
+    <!-- Review form -->
+    <div class="card" id="v-form" hidden>
+      <h1 id="f-title"></h1>
+      <p class="lead" id="f-lead"></p>
+
+      <form id="review-form" novalidate>
+        <p class="status err" id="f-status" role="alert" hidden></p>
+
+        <div class="field">
+          <label for="f-name">Name shown with your review</label>
+          <input type="text" id="f-name" name="display_name" maxlength="60" autocomplete="name" required>
+          <p class="hint">Only this name is shown. We never show your email or handle.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>Your rating</legend>
+          <div class="stars-input" id="stars">
+            <label><input type="radio" name="rating" value="1"><span aria-hidden="true">★</span><span class="sr">1 star</span></label>
+            <label><input type="radio" name="rating" value="2"><span aria-hidden="true">★</span><span class="sr">2 stars</span></label>
+            <label><input type="radio" name="rating" value="3"><span aria-hidden="true">★</span><span class="sr">3 stars</span></label>
+            <label><input type="radio" name="rating" value="4"><span aria-hidden="true">★</span><span class="sr">4 stars</span></label>
+            <label><input type="radio" name="rating" value="5"><span aria-hidden="true">★</span><span class="sr">5 stars</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-title-in">Headline <span class="opt">(optional)</span></label>
+          <input type="text" id="f-title-in" name="title" maxlength="100">
+        </div>
+
+        <div class="field">
+          <label for="f-body">Your review</label>
+          <textarea id="f-body" name="body" maxlength="1500" required></textarea>
+          <p class="hint counter"><span id="f-count">0</span> / 1500</p>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Leave this field empty</label>
+          <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" type="submit" id="f-submit">Submit review</button>
+          <button class="btn btn-danger" type="button" id="f-delete" hidden>Delete review</button>
+        </div>
+      </form>
+
+      <div class="reply" id="f-reply" hidden>
+        <strong>Reply from Emberence</strong>
+        <p id="f-reply-text"></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+/* EMBERENCE DIGITAL: private review page (vanilla JS) */
+(function () {
+  'use strict';
+
+  /* Keep this path matching where you upload api/review.php */
+  var API = 'api/review.php';
+  var token = (new URLSearchParams(location.search).get('t') || '').trim();
+
+  var $ = function (id) { return document.getElementById(id); };
+  var views = { loading: $('v-loading'), message: $('v-message'), form: $('v-form') };
+  var form = $('review-form'), statusBox = $('f-status'), submitBtn = $('f-submit'), deleteBtn = $('f-delete');
+  var existing = false;
+
+  function show(name) {
+    Object.keys(views).forEach(function (k) { views[k].hidden = (k !== name); });
+    window.scrollTo(0, 0);
+  }
+
+  function message(title, text, showLink) {
+    $('m-title').textContent = title;
+    $('m-text').textContent = text;
+    $('m-link').hidden = !showLink;
+    show('message');
+  }
+
+  function setStatus(text, ok) {
+    statusBox.textContent = text;
+    statusBox.className = 'status ' + (ok ? 'ok' : 'err');
+    statusBox.setAttribute('role', ok ? 'status' : 'alert');
+    statusBox.hidden = !text;
+  }
+
+  function call(url, init) {
+    return fetch(url, init)
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .catch(function () { return { state: 'network' }; });
+  }
+
+  /* Link problems (shown as a message instead of the form) */
+  function linkProblem(d) {
+    switch (d.state) {
+      case 'expired':   message('This link has expired', 'Review links stay open for a limited time. Ask us for a new one and we will send it over.'); return true;
+      case 'revoked':   message('This link is no longer active', 'Please contact us if you would like to leave a review.'); return true;
+      case 'throttled': message('Too many tries', 'Please wait a few minutes and try again.'); return true;
+      case 'network':   message('We could not reach the server', 'Check your connection and reload this page.'); return true;
+      case 'invalid':   message('This link does not work', 'Make sure you copied the whole link, or ask us to send it again.'); return true;
+    }
+    return false;
+  }
+
+  /* Stars */
+  var starLabels = document.querySelectorAll('#stars label');
+  function paintStars() {
+    var v = +(form.elements.rating.value || 0);
+    starLabels.forEach(function (l, i) { l.classList.toggle('on', i < v); });
+  }
+  form.addEventListener('change', function (e) { if (e.target.name === 'rating') paintStars(); });
+
+  /* Character counter */
+  var body = $('f-body'), count = $('f-count');
+  function updateCount() { count.textContent = body.value.length; }
+  body.addEventListener('input', updateCount);
+
+  function showForm(d) {
+    existing = d.state === 'existing';
+    var r = existing ? d.review : { name: d.name || '', rating: 0, title: '', body: '', reply: '' };
+
+    $('f-title').textContent = existing ? 'Your review' : 'How was working with Emberence?';
+    $('f-lead').textContent = existing
+      ? 'You can change or delete your review any time using this same link.'
+      : 'Hi ' + (r.name || 'there') + ', thank you for working with us. Your review helps other creators decide.';
+    form.elements.display_name.value = r.name;
+    form.elements.rating.value = r.rating ? String(r.rating) : '';
+    if (r.rating) { form.elements.rating.value = String(r.rating); }
+    form.elements.title.value = r.title;
+    form.elements.body.value = r.body;
+    form.elements.website.value = '';
+    /* RadioNodeList.value can't be unset by '' in all browsers, so uncheck explicitly */
+    Array.prototype.forEach.call(form.querySelectorAll('input[name=rating]'), function (i) { i.checked = (+i.value === +r.rating); });
+    paintStars(); updateCount(); setStatus('');
+
+    submitBtn.textContent = existing ? 'Save changes' : 'Submit review';
+    deleteBtn.hidden = !existing;
+    $('f-reply').hidden = !r.reply;
+    $('f-reply-text').textContent = r.reply || '';
+    show('form');
+  }
+
+  function load() {
+    show('loading');
+    if (!/^[a-f0-9]{48}$/.test(token)) { message('This link does not work', 'Make sure you copied the whole link, or ask us to send it again.'); return; }
+    call(API + '?t=' + encodeURIComponent(token)).then(function (d) {
+      if (linkProblem(d)) return;
+      if (d.state === 'new' || d.state === 'existing') showForm(d);
+      else message('Something went wrong', 'Please reload this page and try again.');
+    });
+  }
+
+  function post(payload) {
+    return call(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var name = f.display_name.value.trim(), text = f.body.value.trim(), rating = +(f.rating.value || 0);
+
+    if (name.length < 2) { setStatus('Enter the name you want shown with your review.'); f.display_name.focus(); return; }
+    if (!rating)         { setStatus('Choose a star rating from 1 to 5.'); return; }
+    if (text.length < 10){ setStatus('Write at least a short sentence about your experience.'); f.body.focus(); return; }
+
+    setStatus('');
+    submitBtn.disabled = true;
+    var wasExisting = existing;
+
+    post({
+      t: token, action: existing ? 'update' : 'submit',
+      display_name: name, rating: rating, title: f.title.value.trim(), body: text, website: f.website.value
+    }).then(function (d) {
+      submitBtn.disabled = false;
+      if (d.result === 'success') {
+        if (wasExisting) { setStatus('Changes saved. They are already live on the site.', true); return; }
+        message('Thank you, ' + name, 'Your review is now live on our website. You can come back to this link any time to edit or delete it.', true);
+        return;
+      }
+      if (linkProblem(d)) return;
+      if (d.reason === 'exists') { load(); return; }
+      if (d.reason === 'validation') { setStatus('Please check your name, rating and review, then try again.'); return; }
+      setStatus('Your review could not be saved. Please try again in a moment.');
+    });
+  });
+
+  deleteBtn.addEventListener('click', function () {
+    if (!window.confirm('Delete your review? It will be removed from our website.')) return;
+    deleteBtn.disabled = true;
+    post({ t: token, action: 'delete' }).then(function (d) {
+      deleteBtn.disabled = false;
+      if (d.result === 'success') {
+        message('Your review was deleted', 'It is no longer shown on our website.');
+        return;
+      }
+      if (linkProblem(d)) return;
+      setStatus('Your review could not be deleted. Please try again in a moment.');
+    });
+  });
+
+  load();
+})();
+  </script>
+</body>
+</html>

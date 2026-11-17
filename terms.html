@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms &amp; Conditions | EMBERENCE DIGITAL</title>
+  <meta name="description" content="The terms for working with Emberence Digital: pricing, payment, revisions, turnaround, refunds, ownership of your footage and confidentiality.">
+  <meta name="theme-color" content="#171A1C">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+/* EMBERENCE DIGITAL: Terms & Conditions page (same design system as the homepage) */
+:root {
+  --dark: #171A1C; --lime: #B8F34A; --off-white: #F5F5F2;
+  --text: #30363B; --muted: #777777; --white: #ffffff;
+  --line: rgba(23, 26, 28, .1); --line-dark: rgba(245, 245, 242, .14);
+  --font-head: 'Manrope', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --header-h: 72px; --ease: .2s ease;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1.5rem); }
+body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.75; color: var(--text); background: var(--off-white); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+h1, h2 { font-family: var(--font-head); color: var(--dark); line-height: 1.2; margin: 0; letter-spacing: -.02em; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+.container { width: min(1160px, 100% - 3rem); margin-inline: auto; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: .7rem 1.2rem; border-radius: 8px; border: 1.5px solid transparent; font: 600 .9rem/1 var(--font-head); cursor: pointer; transition: background var(--ease), color var(--ease), transform var(--ease); }
+.btn-primary { background: var(--lime); color: var(--dark); }
+.btn-primary:hover { background: var(--off-white); transform: translateY(-1px); }
+.text-link { font-weight: 600; color: var(--dark); border-bottom: 2px solid var(--lime); padding-bottom: 1px; transition: border-color var(--ease); }
+.text-link:hover { border-color: var(--dark); }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; height: var(--header-h); background: var(--dark); border-bottom: 1px solid var(--line-dark); }
+.nav { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--off-white); }
+.brand img { display: block; height: 36px; width: auto; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-name { font: 800 1.2rem var(--font-head); letter-spacing: .08em; }
+.brand-sub { font: 600 .62rem var(--font-head); letter-spacing: .5em; color: var(--lime); margin-top: .3rem; }
+.nav-links { display: flex; align-items: center; gap: 1.6rem; }
+.nav-links > a:not(.btn) { font: 500 .94rem var(--font-body); color: rgba(245, 245, 242, .75); transition: color var(--ease); }
+.nav-links > a:not(.btn):hover { color: var(--off-white); }
+
+/* Page */
+main { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.page-head { max-width: 40rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.page-head h1 { margin-top: 1.4rem; font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; }
+.page-head p { margin-top: .9rem; color: var(--muted); }
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+
+/* Contents list */
+.toc { position: sticky; top: calc(var(--header-h) + 1.5rem); font-size: .9rem; }
+.toc h2 { font-size: 1rem; margin-bottom: .8rem; }
+.toc li + li { margin-top: .15rem; }
+.toc a { display: block; padding: .3rem 0 .3rem .9rem; border-left: 2px solid var(--line); color: var(--muted); line-height: 1.4; transition: color var(--ease), border-color var(--ease); }
+.toc a:hover { color: var(--dark); border-color: var(--lime); }
+
+/* Document */
+.doc { max-width: 46rem; }
+.summary { margin-bottom: 3rem; padding: 1.6rem 1.8rem; background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--lime); border-radius: 0 12px 12px 0; }
+.summary h2 { font-size: 1.15rem; margin-bottom: .8rem; }
+.summary li { position: relative; padding-left: 1.2rem; }
+.summary li + li { margin-top: .4rem; }
+.summary li::before { content: ""; position: absolute; left: 0; top: .75em; width: 6px; height: 6px; border-radius: 50%; background: var(--dark); }
+.clause { padding-bottom: 2.2rem; margin-bottom: 2.2rem; border-bottom: 1px solid var(--line); }
+.clause:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.clause h2 { font-size: 1.35rem; margin-bottom: .8rem; }
+.clause p + p, .clause p + ul { margin-top: .9rem; }
+.clause ul { display: grid; gap: .6rem; }
+.clause li { position: relative; padding-left: 1.3rem; }
+.clause li::before { content: ""; position: absolute; left: .1rem; top: .8em; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 1px var(--dark); }
+.clause strong, .summary strong { color: var(--dark); font-weight: 600; }
+
+/* Footer */
+.footer { background: var(--dark); color: rgba(245, 245, 242, .7); padding: 1.5rem 0; font-size: .88rem; }
+.footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.footer a:hover { color: var(--lime); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .toc { display: none; }
+}
+@media (max-width: 600px) {
+  .container { width: min(1160px, 100% - 2.25rem); }
+  .nav-links { gap: 1rem; }
+  .summary { padding: 1.3rem 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Emberence Digital, home">
+        <img src="emberence-creative-logo.png" alt="" width="34" height="36">
+        <span class="brand-text"><span class="brand-name">EMBERENCE</span><span class="brand-sub">DIGITAL</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="btn btn-primary" href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-head">
+        <a class="text-link" href="index.html">Back to home</a>
+        <h1>Terms &amp; Conditions</h1>
+        <p>Last updated: 17 November 2026</p>
+      </div>
+
+      <div class="layout">
+        <nav class="toc" aria-label="Contents">
+          <h2>Contents</h2>
+          <ul>
+          <li><a href="#about">1. About these terms</a></li>
+          <li><a href="#service">2. What we do</a></li>
+          <li><a href="#pricing">3. Quotes and pricing</a></li>
+          <li><a href="#payment">4. Payment</a></li>
+          <li><a href="#footage">5. Your footage and content</a></li>
+          <li><a href="#turnaround">6. Turnaround time</a></li>
+          <li><a href="#revisions">7. Revisions and approval</a></li>
+          <li><a href="#refunds">8. Cancellations and refunds</a></li>
+          <li><a href="#ownership">9. Ownership and use of your content</a></li>
+          <li><a href="#confidentiality">10. Confidentiality</a></li>
+          <li><a href="#reviews">11. Client reviews</a></li>
+          <li><a href="#responsibilities">12. Your responsibilities</a></li>
+          <li><a href="#liability">13. Limits of our responsibility</a></li>
+          <li><a href="#changes">14. Changes to these terms</a></li>
+          <li><a href="#law">15. Governing law</a></li>
+          <li><a href="#contact">16. Contact us</a></li>
+          </ul>
+        </nav>
+
+        <div class="doc">
+          <div class="summary">
+            <h2>The short version</h2>
+            <ul>
+            <li>We start work after a <strong>50% advance</strong>. The balance is due before we hand over the final files.</li>
+            <li><strong>2 rounds of revisions</strong> are included with every project.</li>
+            <li>Most short videos are delivered in <strong>24 to 48 hours</strong> once we have your footage, brief and advance.</li>
+            <li>Your footage and your finished videos <strong>stay yours</strong>. We never reuse them without your written permission.</li>
+            <li>Once editing has started, the advance is not refundable. Before that, you get it back in full.</li>
+            </ul>
+            <p style="margin-top:1rem;font-size:.92rem;color:var(--muted)">This summary is for convenience. The full terms below are what apply.</p>
+          </div>
+
+        <section class="clause" id="about">
+          <h2>1. About these terms</h2>
+          <p>These terms apply when you request a quote from, or hire, Emberence Digital (&ldquo;Emberence&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) for video editing and related content services. By sending a quote request, paying an advance or sending us your footage, you agree to these terms.</p>
+          <p>If anything in a written quote we send you is different from these terms, the written quote is the one that applies to that project.</p>
+        </section>
+
+        <section class="clause" id="service">
+          <h2>2. What we do</h2>
+          <p>We provide video editing services for creators, brands and businesses, including YouTube videos, Shorts and Reels, podcasts and content repurposing.</p>
+          <p>Your project is edited by skilled editors who work with us. We manage your project from start to finish: we take your brief, give the footage to a suitable editor, check the edit for quality, and deliver the final video to you. Emberence is responsible to you for the quality and delivery of the work, and editors work under confidentiality terms with us.</p>
+        </section>
+
+        <section class="clause" id="pricing">
+          <h2>3. Quotes and pricing</h2>
+          <p>Every project starts with a quote. Prices are in Indian rupees (INR) and are usually a fixed price per video or a monthly package. A quote is valid for 7 days unless it says otherwise.</p>
+          <p>A quote covers only the work it describes. If you ask for more work later, such as extra videos, a longer video than agreed or new footage, we will send a new or updated quote before starting.</p>
+        </section>
+
+        <section class="clause" id="payment">
+          <h2>4. Payment</h2>
+          <ul>
+            <li>We need a <strong>50% advance</strong> before we start work. Monthly packages are paid for each month in advance.</li>
+            <li>The remaining balance is due before we release the final, full-quality files. We may share a preview or low-quality version for your feedback before that.</li>
+            <li>You can pay by UPI or bank transfer. If we add other payment methods, we will tell you before you pay.</li>
+            <li>Please send a payment screenshot or reference, so we can match your payment to your project.</li>
+          </ul>
+        </section>
+
+        <section class="clause" id="footage">
+          <h2>5. Your footage and content</h2>
+          <p>You send us your raw footage, music and other material using a link such as Google Drive or WeTransfer. By sending it, you confirm that you own it or have permission to use it, including any music, clips or images in it.</p>
+          <p>We cannot take responsibility for copyright claims, strikes or takedowns that come from material you supplied. We may decline or stop a project that includes unlawful, hateful or abusive content, or content you do not have the right to use. If we decline, we refund any advance for work that has not started.</p>
+        </section>
+
+        <section class="clause" id="turnaround">
+          <h2>6. Turnaround time</h2>
+          <p>For most short videos (Shorts and Reels), we aim to deliver the first edit within 24 to 48 hours. Longer videos, podcasts and monthly packages are given a delivery date in the quote.</p>
+          <p>The clock starts when we have your complete footage, a clear brief and your advance payment. Delays caused by missing footage, late replies or late payment move the delivery date by the same amount of time. If we expect to miss a date, we will tell you early.</p>
+        </section>
+
+        <section class="clause" id="revisions">
+          <h2>7. Revisions and approval</h2>
+          <ul>
+            <li>Every project includes <strong>2 rounds of revisions</strong> to the edit we delivered. Please ask for revisions within 7 days of delivery.</li>
+            <li>A revision means fixing or adjusting the edit against your original brief, such as trimming a cut, changing captions or fixing audio.</li>
+            <li>Changes that go beyond the original brief, such as a completely new style, new footage or a new video, are new work and will be quoted separately.</li>
+            <li>If we do not hear from you within 7 days after delivery, the project is treated as approved.</li>
+          </ul>
+        </section>
+
+        <section class="clause" id="refunds">
+          <h2>8. Cancellations and refunds</h2>
+          <ul>
+            <li><strong>Before editing starts:</strong> you can cancel and we will return your advance in full.</li>
+            <li><strong>After editing has started:</strong> the advance is not refundable, because an editor has already spent time on your project. We may agree to a partial refund if you cancel early and little work has been done.</li>
+            <li><strong>If we cannot deliver:</strong> if we fail to deliver the agreed work, or we miss the agreed date by more than 7 days without a reason you agreed to, you can cancel and we will refund the payment for the work not delivered.</li>
+            <li>Refunds are paid back by the same method you used, within 7 working days.</li>
+          </ul>
+        </section>
+
+        <section class="clause" id="ownership">
+          <h2>9. Ownership and use of your content</h2>
+          <p>Your raw footage stays yours. Once the project is fully paid, the finished edited video is yours to use as you wish.</p>
+          <p>We do not reuse, resell or share your footage or finished videos. We will show your work in our portfolio or on our social pages only if you agree in writing first. Saying no does not affect your price or service.</p>
+        </section>
+
+        <section class="clause" id="confidentiality">
+          <h2>10. Confidentiality</h2>
+          <p>We keep your footage and project details private. They are shared only with the editor and team members working on your project, who are bound to keep them confidential and not to use them for any other purpose.</p>
+          <p>We delete your project files from our storage within 60 days after final delivery, unless you ask us to keep them or to delete them sooner.</p>
+        </section>
+
+        <section class="clause" id="reviews">
+          <h2>11. Client reviews</h2>
+          <p>After a project, we may send you a private link to leave a review on our website. We do not pay for reviews, and we do not write reviews for clients. Every review comes from a client we have worked with.</p>
+          <p>You can edit or delete your own review at any time using your private link. We may reply to your review publicly. We may remove or hide a review only if it contains abuse, spam, private information about someone else, or is not about our service. We do not remove a review just because it is critical.</p>
+        </section>
+
+        <section class="clause" id="responsibilities">
+          <h2>12. Your responsibilities</h2>
+          <ul>
+            <li>Give us a clear brief and the footage we need to do the work.</li>
+            <li>Reply to our questions and feedback in reasonable time.</li>
+            <li>Pay on time, as set out in your quote.</li>
+            <li>Make sure the content you send is lawful and that you have the right to use it.</li>
+          </ul>
+        </section>
+
+        <section class="clause" id="liability">
+          <h2>13. Limits of our responsibility</h2>
+          <p>We work hard to deliver a polished edit, but we cannot promise results such as views, followers, engagement or income. These depend on many things outside our control.</p>
+          <p>To the extent the law allows, our total responsibility for any claim related to a project is limited to the amount you paid us for that project. We are not responsible for indirect losses, such as lost earnings or lost opportunities.</p>
+        </section>
+
+        <section class="clause" id="changes">
+          <h2>14. Changes to these terms</h2>
+          <p>We may update these terms from time to time. The latest version is always on this page, with the date it was last updated. A change applies to projects that start after the date of the change. Projects already started continue under the terms that applied when they began.</p>
+        </section>
+
+        <section class="clause" id="law">
+          <h2>15. Governing law</h2>
+          <p>These terms are governed by the laws of India. If we cannot settle a disagreement by talking it through first, the courts at Guwahati, Assam will have jurisdiction.</p>
+        </section>
+
+        <section class="clause" id="contact">
+          <h2>16. Contact us</h2>
+          <p>Questions about these terms? Write to us at <a class="text-link" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a> and we will reply as soon as we can.</p>
+        </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Emberence Digital. All rights reserved.</p>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+  <script>
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
